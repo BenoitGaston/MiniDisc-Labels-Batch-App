@@ -1,0 +1,43 @@
+
+
+[project]
+name = "MiniDisc-Labels-Batch-App"
+version = "1.0.0"
+authors = [
+  { name="Benoît Gaston", email="benoitgaston59@gmail.com" },
+]
+description = "A package to extract and manipulate data contained in a music library such as playlists or album cover artwork."
+
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "audio-libraries-tlk>=1.2.2",
+    "ituneslibrary>=1.2.1",
+    "music-tag>=0.4.3",
+    "numpy>=1.24.4",
+    "pandas>=2.0.3",
+    "pillow>=10.4.0",
+    "pydantic>=2.10.6",
+    "pytest>=8.3.5",
+    "requests>=2.32.4",
+    "streamlit>=1.40.1",
+    "tqdm>=4.67.3",
+]
+
+[project.urls]
+Homepage = "https://github.com/BenoitGaston/MiniDisc-Labels-Batch-App"
+
+
+[tool.pytest.ini_options]
+pythonpath = "src"
+
+[tool.setuptools.packages.find]
+where = ["./src/",]
+
+[tool.setuptools.package-data]
+"*" = ["*.*"]
