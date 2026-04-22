@@ -16,6 +16,12 @@ import pandas as pd
 UPLOAD_DIR = ".temp_md_labels_files"
 
 def is_running_on_streamlit_cloud():
+    """
+    Check if the app is running on Streamlit Cloud by looking for a specific environment variable or secret.
+
+    Returns:
+        bool: True if running on Streamlit Cloud, False otherwise.
+    """
     # Check if "is_cloud" exists in secrets and is set to true
     running_on_cloud = st.secrets.get("general", {}).get("is_cloud", False)
 

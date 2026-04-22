@@ -24,3 +24,5 @@ class AlbumImageDict(BaseModel):
     album_artist: Optional[str]
     album_year: Optional[str]
 
+class MDLabelsDF(BaseModel):
+    mini_disc_album_df: pd.DataFrame(columns=["album_artist", "album", "album year"])
